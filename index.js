@@ -6,11 +6,14 @@ function takeANumber (katzDeliLine, newCustomer){
 }
 takeANumber(['me'], "sonia")
 
-function nowServing (katzDeliLine) { 
- if(katzDeliLine.length===0) {
-return 'There is nobody waiting to be served!'; 
- var customer = katzDeliLine.shift(); 
- return "Currently serving " + customer + "."; 
+function nowServing (katzDeliLine){ 
+if(katzDeliLine.length === 0) {
+return 'There is nobody waiting to be served!'
+}
+else{
+var currCust = katzDeliLine.shift()
+
+return `Currently serving ${currCust}.`
 }
 }
 
@@ -26,7 +29,7 @@ function currentLine(katzDeliLine){
   
   return "The line is currently: "+ results.join(', ')
 }}
-currentLine(["Ada", "Grace"])
+currentLine(["Blake", "Steven"]);
 
 
 
